@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cloud Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #fff;
+        }
+
+        /* Header styling */
+        header {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        header h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffdd57;
+            margin: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffdd57;
+        }
+
+        /* Main content styling */
+        .container {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #ffdd57;
+        }
+        p {
+            font-size: 18px;
+            color: #dcdcdc;
+            line-height: 1.6;
+        }
+
+        /* Footer styling */
+        footer {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            text-align: center;
+            color: #dcdcdc;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        .social-icons a {
+            color: #ffdd57;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ff7e5f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h2>Cloud Detection</h2>
+      <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+<br>
+<br>
+    <!-- Main content -->
+    <div class="container">
+        <h1>About Cloud Detection App</h1>
+        <p>Welcome to the Cloud Detection App, a tool designed to help you analyze satellite images and detect clouds with ease and accuracy. Leveraging advanced image processing and machine learning techniques, our app provides real-time predictions, helping you make informed decisions.</p>
+        <p>Whether you’re in meteorology, environmental research, or simply curious about cloud coverage, our tool is designed to be user-friendly and accessible to everyone.</p>
+        <p>Our mission is to provide efficient cloud detection technology that empowers researchers, scientists, and enthusiasts alike in their quest for knowledge and data insights.</p>
+    </div>
+<br>
+<br>
+    <!-- Footer -->
+   <footer>
+        <p>Contact us at <a href="tel:+79153880942" style="color: #ffdd57;">+79153880942</a> or <a href="mailto:engr.azizahmad7751@gmail.com" style="color: #ffdd57;">engr.azizahmad7751@gmail.com</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Aziz7751/" class="fab fa-facebook">Facebook</a>
+            <a href="https://www.linkedin.com/in/theazizahmad/" class="fab fa-linkedin">Linkedin</a>
+            
+        </div>
+          <p>&copy; 2024 Cloud Detection App. Developed by <strong> Aziz Ahmad </strong> under the supervision of <strong>Prof. Antonio Rodriges</strong>.</p>
+    </footer>
+
+    <!-- FontAwesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

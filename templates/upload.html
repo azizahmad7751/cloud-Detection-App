@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image - Cloud Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #fff;
+        }
+
+        /* Header styling */
+        header {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        header h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffdd57;
+            margin: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffdd57;
+        }
+
+        /* Main container styling */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #ffdd57;
+        }
+
+        .custom-file-upload {
+            color: #fff;
+            background-color: #ff7e5f;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #ff6b4d;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .submit-btn {
+            color: #fff;
+            background-color: #56ab2f;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #3d8b1f;
+        }
+
+        /* Footer styling */
+        footer {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            text-align: center;
+            color: #dcdcdc;
+            font-size: 14px;
+            margin-top: auto;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        .social-icons a {
+            color: #ffdd57;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ff7e5f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h2>Cloud Detection</h2>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+<br>
+<br>
+    <!-- Main content -->
+    <div class="container">
+        
+        <h1>Upload an Image for Cloud Detection</h1>
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload">
+                Select Image
+            </label>
+            <input id="file-upload" type="file" name="file" required>
+            <button type="submit" class="submit-btn">Upload Image</button>
+        </form>
+    </div>
+<br>
+<br>
+    <!-- Footer -->
+    <footer>
+        <p>Contact us at <a href="tel:+79153880942" style="color: #ffdd57;">+79153880942</a> or <a href="mailto:engr.azizahmad7751@gmail.com" style="color: #ffdd57;">engr.azizahmad7751@gmail.com</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Aziz7751/" class="fab fa-facebook">Facebook</a>
+            <a href="https://www.linkedin.com/in/theazizahmad/" class="fab fa-linkedin">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 Cloud Detection App. Developed by <strong> Aziz Ahmad </strong> under the supervision of <strong>Prof. Antonio Rodriges</strong>.</p>
+    </footer>
+
+    <!-- FontAwesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
