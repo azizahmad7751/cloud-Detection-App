@@ -1,6 +1,6 @@
 # Cloud Detection App
 
-A web application built with Flask that allows users to upload satellite images for cloud detection. Using image processing techniques and a pre-trained model, the app provides a prediction of cloud presence along with a confidence score.
+A web application built with Flask that allows users to upload satellite images for cloud detection. Using image processing techniques and a CNN Deep Learning model, the app provides a prediction of cloud presence along with a confidence score.
 
 ## Features
 
