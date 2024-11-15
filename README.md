@@ -66,10 +66,10 @@ A web application built with Flask that allows users to upload satellite images 
 - Styling: Modify HTML and CSS files located in the templates/ and static/css/ directories to personalize the app's look and feel.
 
 ## Contributing
-###Contributions are welcome! If you have suggestions for improvements or want to report an issue, feel free to:
+Contributions are welcome! If you have suggestions for improvements or want to report an issue, feel free to:
 -Submit a pull request.
 -Open an issue in the repository.
 
 ## Contact
-###For questions, feedback, or support, please contact:
-###Email: caps7751@gmail.com
+-For questions, feedback, or support, please contact:
+-Email: caps7751@gmail.com
