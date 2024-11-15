@@ -11,13 +11,13 @@ A web application built with Flask that allows users to upload satellite images 
 ## Demo
 
 ### Home Page
-![Home Page](static/images/homepage_screenshot.png)
+![Home Page](static/images/Home_Page.jpg)
 
 ### Upload Page
-![Upload Page](static/images/upload_screenshot.png)
+![Upload Page](static/images/Upload_Page.jpg)
 
 ### Results Page
-![Results Page](static/images/results_screenshot.png)
+![Results Page](static/images/result_Page.jpg)
 
 ## Technologies Used
 
