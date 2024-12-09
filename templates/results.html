@@ -13,7 +13,6 @@
             color: #fff;
         }
 
-        /* Header styling */
         header {
             background: rgba(0, 0, 0, 0.85);
             padding: 15px 20px;
@@ -39,14 +38,13 @@
             color: #ffdd57;
         }
 
-        /* Main container styling */
         .container {
             text-align: center;
             background: rgba(0, 0, 0, 0.8);
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
+            max-width: 800px;
             width: 100%;
             margin: 20px auto;
         }
@@ -63,7 +61,7 @@
             margin-bottom: 15px;
         }
 
-        .confidence-text {
+        .confidence-text, .metrics-text {
             font-size: 20px;
             margin-bottom: 20px;
             color: #dcdcdc;
@@ -104,7 +102,6 @@
             background-color: #3d8b1f;
         }
 
-        /* Footer styling */
         footer {
             background: rgba(0, 0, 0, 0.85);
             padding: 20px;
@@ -129,7 +126,7 @@
     </style>
 </head>
 <body>
-  <!-- Header -->
+    <!-- Header -->
     <header>
         <h2>Cloud Detection</h2>
         <nav>
@@ -138,12 +135,26 @@
             <a href="{{ url_for('contact') }}">Contact</a>
         </nav>
     </header>
+    
     <!-- Main content -->
     <div class="container">
         <h1>Cloud Detection Results</h1>
-        <p class="result-text">Prediction: <strong>{{ result }}</strong></p>
-        <p class="confidence-text">Confidence: <strong>{{ confidence }}%</strong></p>
-        
+        <center>
+        <table border="1">
+        <tr>
+            <th>Model</th>
+            <th>Result</th>
+            <th>Confidence (%)</th>
+        </tr>
+        {% for model, result in predictions.items() %}
+        <tr>
+            <td>{{ model }}</td>
+            <td>{{ result.result }}</td>
+            <td>{{ "%.2f" | format(result.confidence) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
         <div class="image-container">
             <img src="{{ url_for('display_image', filename=filename) }}" alt="Uploaded Image">
         </div>
@@ -158,12 +169,10 @@
         <p>Contact us at <a href="tel:+79153880942" style="color: #ffdd57;">+79153880942</a> or <a href="mailto:engr.azizahmad7751@gmail.com" style="color: #ffdd57;">engr.azizahmad7751@gmail.com</a></p>
         <div class="social-icons">
             <a href="https://www.facebook.com/Aziz7751/" class="fab fa-facebook">Facebook</a>
-            <a href="https://www.linkedin.com/in/theazizahmad/" class="fab fa-linkedin">Linkedin</a>
-            
+            <a href="https://www.linkedin.com/in/theazizahmad/" class="fab fa-linkedin">LinkedIn</a>
         </div>
-        <p>&copy; 2024 Cloud Detection App. Developed by <strong> Aziz Ahmad </strong> under the supervision of <strong>Prof. Antonio Rodriges</strong>.</p>
+        <p>&copy; 2024 Cloud Detection App. Developed by <strong>Aziz Ahmad</strong> under the supervision of <strong>Prof. Antonio Rodriges</strong>.</p>
     </footer>
-    <!-- FontAwesome for social media icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
